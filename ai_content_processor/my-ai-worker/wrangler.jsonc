@@ -1,0 +1,8 @@
+{
+  "name": "my-ai-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-08-23",
+  "ai": {
+    "binding": "AI"
+  }
+}

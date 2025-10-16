@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CogniCore AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Auth Screen (Visible by default) -->
+    <div id="auth-container" class="auth-container">
+        <div class="auth-box">
+            <div id="login-view">
+                <h1>Welcome Back to CogniCore</h1>
+                <p>Sign in to access your knowledge base.</p>
+                <form id="login-form">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p class="toggle-auth">Don't have an account? <a href="#" id="show-register">Sign Up</a></p>
+            </div>
+            <div id="register-view" class="hidden">
+                <h1>Create Your CogniCore Account</h1>
+                <p>Start building your personal knowledge base today.</p>
+                <form id="register-form">
+                    <input type="text" id="register-name" placeholder="Name" required>
+                    <input type="email" id="register-email" placeholder="Email" required>
+                    <input type="password" id="register-password" placeholder="Password" required>
+                    <button type="submit">Create Account</button>
+                </form>
+                <p class="toggle-auth">Already have an account? <a href="#" id="show-login">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App (Hidden by default) -->
+    <div id="app-container" class="app-container hidden">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <h1>CogniCore</h1>
+                <div class="user-info">
+                    <p id="user-name-display"></p>
+                    <button id="logout-btn">Logout</button>
+                </div>
+            </header>
+            <section class="process-section">
+                <h2>Process New Source</h2>
+                <input type="text" id="urlInput" placeholder="Enter YouTube or Website URL...">
+                <div class="divider">OR</div>
+                <input type="file" id="pdfInput" accept=".pdf" class="file-input">
+                <button id="processBtn">Process</button>
+            </section>
+            <section class="sources-section">
+                <h2>My Knowledge Base</h2>
+                <div id="sourcesList" class="sources-list"></div>
+            </section>
+        </aside>
+
+        <main id="main-content" class="main-content">
+            <div id="welcome-screen" class="welcome-screen">
+                <h2>Select a source to start chatting</h2>
+                <p>Your processed documents will appear in your knowledge base on the left.</p>
+            </div>
+            <div id="chat-interface" class="chat-interface hidden">
+                <header id="chat-header" class="chat-header"></header>
+                <div id="chat-history" class="chat-history"></div>
+                <footer class="chat-footer">
+                    <input type="text" id="chatInput" placeholder="Ask a question...">
+                    <button id="chatBtn">&rarr;</button>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- Spinner -->
+    <div id="spinner-overlay" class="spinner-overlay hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Python virtual environment
+acpenv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Database file (optional)
+# It's good practice to not upload your database.
+# If you want to include a sample, you can remove the line below.
+content.db
+
+# VS Code settings
+.vscode/
